@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
+// import NewExpense from "./NewExpense";
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
@@ -74,7 +75,12 @@ const ExpenseForm = (props) => {
             onChange={dateChangeDate}
           ></input>
         </div>
-        <button type="submit">Click!</button>
+      </div>
+      <div className="new-expense__actions">
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
+        <button type="submit">Add new Expense</button>
       </div>
     </form>
   );
